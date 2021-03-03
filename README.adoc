@@ -1,1 +1,15 @@
-# AsciidocTest
+:toc: left
+:toc-title: 目次
+:sectnums:
+
+= AsciidocTest
+
+== 目的
+
+AsciiDoc と GitHUb Actions を使ってできそうなことをいろいろ試してまとめる。
+
+== やったことリスト
+
+=== これこれ
+
+=== あれあれ
