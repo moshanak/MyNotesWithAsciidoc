@@ -1,6 +1,7 @@
 :toc: left
 :toc-title: 目次
 :sectnums:
+:toclevels: 5
 
 = AsciidocTest
 
@@ -10,6 +11,30 @@ AsciiDoc と GitHUb Actions を使ってできそうなことをいろいろ試�
 
 == やったことリスト
 
-=== これこれ
+=== AsciiDoc
 
-=== あれあれ
+==== 準備
+
+. VS Code をインストール
+. VS Code に AsciiDoc 拡張機能を追加
+
+==== 使い方
+* VS Code 上で AsciiDoc を記述できる。
+* Ctrl+K, V でプレビュー表示できる。
+* Ctrl+Shift+P で HTML 出力や PDF 出力が可能。
+* Ctrl+Alt+V でキャプチャした画像を貼り付けて、かつ画像ファイルも作成できる。
+
+
+=== GitHub Pages
+
+==== 準備
+
+. index.html をリポジトリのルートに配置する。
+. Private リポジトリで利用するのは有料になるため、Public リポジトリにする。
+. Setting の GitHub Pages を有効にする。
+
+==== 使い方
+
+* 準備が一通り完了すれば、index.html の内容を見ることができるようになる。 +
+https://moshanak.github.io/AsciidocTest/
+* デフォルトでは、URL はアカウント名とリポジトリ名を組み合わせたものになる。ドメインを取得して変えることもできるそうだが、試していない。 
