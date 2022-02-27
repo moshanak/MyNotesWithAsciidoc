@@ -17,7 +17,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Convert adoc to html
-        run: asciidoctor *.adoc -a ext=html
+        run: find . -name *.adoc
+        #run: asciidoctor *.adoc -a ext=html
       - name: push html files
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
