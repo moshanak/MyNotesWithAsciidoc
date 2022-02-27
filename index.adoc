@@ -2,6 +2,7 @@
 :toc-title: 目次
 :sectnums:
 :toclevels: 5
+:ext: adoc
 
 = AsciidocTest
 
@@ -9,6 +10,7 @@
 
 AsciiDoc と GitHUb Actions を使ってできそうなことをいろいろ試してまとめる。
 変更チェック。
+link:doc/test.{ext}[test]
 
 == やったことリスト
 

@@ -1,44 +1,10 @@
 name: Asciidoc to Html
 
-# Run this workflow every time a new commit pushed to your repository
 on: [push]
+#    branches:    
+#      - 'main'
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
-  #super-lint:
-    # Name the Job
-    #name: Lint code base
-    # Set the type of machine to run on
-    #runs-on: ubuntu-latest
-
-    #steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      #- name: Checkout code
-      #  uses: actions/checkout@v2
-
-      # Runs the Super-Linter action
-      #- name: Run Super-Linter
-      #  uses: github/super-linter@v3
-      #  env:
-      #    DEFAULT_BRANCH: main
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-
   Asciidoctor-Actions:
     runs-on: ubuntu-latest
     steps:
@@ -47,34 +13,16 @@ jobs:
         with:
           ruby-version: 2.7    
       - name: Asciidoctor Setup
-        # You may pin to the exact commit or the version.
-        # uses: reitzig/actions-asciidoctor@7570212ae20b63653481675fb1ff62d1073632b0
         uses: reitzig/actions-asciidoctor@v2.0.0
-      - run: asciidoctor --version
       - name: Check out repository code
-        uses: actions/checkout@v2      
-      - run: asciidoctor ./index.adoc
-      - run: git --version
-      - name: 差分を push
+        uses: actions/checkout@v2
+      - name: Convert adoc to html
+        run: asciidoctor *.adoc -a ext=html
+      - name: push html files
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
-          git commit -a -m "GitHub Actions から Push"
+          git commit -a -m "[GitHub Actions] update html files for GitHub Pages"
           git push origin HEAD:${GITHUB_REF}
-#          if (git diff --shortstat | grep '[0-9]'); then \
-#            git add .; \
-#            git commit -m "GitHub Actions から差分を Push"; \
-#            git push origin HEAD:${GITHUB_REF}; \
-#          fi
-      #- name: Deploy
-      #  uses: peaceiris/actions-gh-pages@v3
-      #  with:
-      #    github_token: ${{ secrets.GITHUB_TOKEN }}
-      #    publish_dir: ./
-      #- name: update artifact
-      #  uses: actions/upload-artifact@v1
-      #  with:
-      #    name: release-html
-      #    path: ./README.html
