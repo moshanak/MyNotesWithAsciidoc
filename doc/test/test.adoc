@@ -4,6 +4,5 @@
 :toclevels: 5
 :ext: adoc
 
-= test
+= Test2
 
-link:test/test.adoc[test]
