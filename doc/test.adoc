@@ -6,4 +6,4 @@
 
 = test
 
-link:test/test.adoc[test]
+link:test/test.{ext}[test]
