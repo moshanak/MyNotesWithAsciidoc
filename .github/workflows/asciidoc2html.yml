@@ -54,6 +54,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2      
       - run: asciidoctor ./index.adoc
+      - run: git --version
       - name: 差分を push
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
