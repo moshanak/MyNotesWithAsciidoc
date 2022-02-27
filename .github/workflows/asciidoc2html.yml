@@ -17,7 +17,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Convert adoc to html
-        run: find . -name "*.adoc"
+        run: find . -name "*.adoc" -exec asciidoctor {} -a ext=html \;
         #run: asciidoctor *.adoc -a ext=html
       - name: push html files
         run: |
