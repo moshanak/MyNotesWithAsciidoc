@@ -51,6 +51,8 @@ jobs:
         # uses: reitzig/actions-asciidoctor@7570212ae20b63653481675fb1ff62d1073632b0
         uses: reitzig/actions-asciidoctor@v2.0.0
       - run: asciidoctor --version
+      - name: Check out repository code
+        uses: actions/checkout@v2      
       - run: asciidoctor ./README.adoc
       - name: update artifact
         uses: actions/upload-artifact@v1
