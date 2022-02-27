@@ -53,14 +53,14 @@ jobs:
       - run: asciidoctor --version
       - name: Check out repository code
         uses: actions/checkout@v2      
-      - run: asciidoctor ./README.adoc
+      - run: asciidoctor ./index.adoc
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
-      - name: update artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: release-html
-          path: ./README.html
+      #- name: update artifact
+      #  uses: actions/upload-artifact@v1
+      #  with:
+      #    name: release-html
+      #    path: ./README.html
