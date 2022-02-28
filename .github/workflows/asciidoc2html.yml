@@ -1,8 +1,8 @@
 name: Asciidoc to Html
 
 on: [push]
-#    branches:    
-#      - 'main'
+    branches:    
+      - 'main'
 
 jobs:
   Asciidoctor-Actions:
@@ -18,7 +18,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Convert adoc to html
         run: find . -name "*.adoc" -exec asciidoctor {} -a ext=html \;
-        #run: asciidoctor *.adoc -a ext=html
       - name: push html files
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
