@@ -6,4 +6,7 @@
 
 = test
 
+* 変更されるかチェック
+
 link:test/test.{ext}[test]
+
