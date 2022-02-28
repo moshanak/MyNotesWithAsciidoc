@@ -26,4 +26,7 @@ jobs:
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
           git commit -a -m "[GitHub Actions] update html files for GitHub Pages"
-          git push origin HEAD:${GITHUB_REF}
+          git push origin main
+          git checkout -t origin/gh-pages
+          git merge main
+          git push origin gh-pages
