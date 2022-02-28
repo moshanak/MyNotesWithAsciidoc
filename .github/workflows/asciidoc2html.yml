@@ -27,6 +27,7 @@ jobs:
           git add .
           git commit -a -m "[GitHub Actions] update html files for GitHub Pages"
           git push origin main
-          git checkout -t origin/gh-pages
-          git merge main
-          git push origin gh-pages
+          git branch -a
+          #git checkout -t origin/gh-pages
+          #git merge main
+          #git push origin gh-pages
