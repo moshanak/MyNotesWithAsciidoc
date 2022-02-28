@@ -1,6 +1,7 @@
 name: Asciidoc to Html
 
-on: [push]
+on:
+  push:
     branches:    
       - 'main'
 
