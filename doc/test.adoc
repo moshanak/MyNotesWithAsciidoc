@@ -1,0 +1,9 @@
+:toc: left
+:toc-title: 目次
+:sectnums:
+:toclevels: 5
+:ext: adoc
+
+= test
+
+link:test/test.{ext}[test]
