@@ -29,4 +29,5 @@ jobs:
           git push origin main
           git fetch
           git checkout -t origin/gh-pages
-          git rebase -onto origin/main origin/main gh-pages
+          git rebase --onto origin/main origin/main gh-pages
+          git push --force-with-lease origin gh-pages
