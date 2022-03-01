@@ -28,6 +28,6 @@ jobs:
           git commit -a -m "[GitHub Actions] update html files for GitHub Pages"
           git push origin main
           git fetch
-          git checkout -t origin/gh-pages
-          git merge origin/main
-          git push origin gh-pages
+          git push --delete origin gh-pages
+          git checkout -b gh-pages origin/main
+          git push -u origin gh-pages
