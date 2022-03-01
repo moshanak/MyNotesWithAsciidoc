@@ -29,5 +29,5 @@ jobs:
           git push origin main
           git fetch
           git checkout -t origin/gh-pages
-          git merge origin/main -Xtheirs --allow-unrelated-histories
+          git merge origin/main -s theirs --allow-unrelated-histories
           git push origin gh-pages
