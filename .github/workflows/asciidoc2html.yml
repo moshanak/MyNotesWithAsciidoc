@@ -30,5 +30,6 @@ jobs:
           git fetch
           git pull
           git checkout -t origin/gh-pages
+          
           git pull --rebase origin main
           git push origin gh-pages --force-with-leas
