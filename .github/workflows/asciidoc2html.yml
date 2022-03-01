@@ -29,5 +29,5 @@ jobs:
           git push origin main
           git fetch
           git checkout -t origin/gh-pages
-          git rebase main
+          git rebase main --skip
           git push origin gh-pages --force-with-leas
