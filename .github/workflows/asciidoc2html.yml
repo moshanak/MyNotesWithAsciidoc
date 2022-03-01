@@ -29,5 +29,5 @@ jobs:
           git push origin main
           git fetch
           git checkout -t origin/gh-pages
-          git pull --rebase -Xours origin main
+          git pull --rebase -ff-only origin main
           git push origin gh-pages --force-with-leas
