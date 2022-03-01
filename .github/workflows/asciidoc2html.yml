@@ -29,4 +29,4 @@ jobs:
           git push origin main
           git fetch
           git checkout -t origin/gh-pages
-          git rebase origin/main
+          git rebase --keep-base origin/main
