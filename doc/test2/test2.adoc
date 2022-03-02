@@ -4,5 +4,8 @@
 :toclevels: 5
 :ext: adoc
 
-= Test2
+= test2
 
+* aaa
+** bbb
+*** ccc
