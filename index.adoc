@@ -9,7 +9,7 @@
 == 目的
 
 AsciiDoc と GitHUb Actions を使ってできそうなことをいろいろ試してまとめる。
-変更チェック。
+変更チェック。テスト。
 link:doc/test.{ext}[test]
 
 == やったことリスト
