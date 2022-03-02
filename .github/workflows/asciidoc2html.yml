@@ -29,7 +29,7 @@ jobs:
           git commit -a -m "[GitHub Actions] update html files for GitHub Pages"
           git push origin main
           git branch -a
-          git fetch
+          git pull --all
           git checkout -t origin/#9
           git branch -a
           git rebase origin/main
