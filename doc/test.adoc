@@ -8,5 +8,5 @@
 
 * 変更されるかチェック
 
-link:test/test.{ext}[test]
+link:test2/test2.{ext}[test]
 
