@@ -1,0 +1,6 @@
+= MyNotesWithAsciidoc
+
+* 個人的な備忘録として、調べたことを AsciiDoc 形式で記述しています。 
+* AsciiDoc のままでは閲覧しにくいので、GitHub Actions で自動的に AsciiDoc を HTML へ変換して、GitHub Pages で公開しています。
+** GitHub Pages: https://moshanak.github.io/MyNotesWithAsciidoc/
+ 
