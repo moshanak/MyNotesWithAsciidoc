@@ -30,7 +30,7 @@ jobs:
           git push origin main
           git branch -a
           git fetch
-          git checkout -t origin/gh-pages
-          git branch -a          
-          #git rebase origin/main
-          #git push --force-with-lease origin gh-pages
+          git checkout -t origin/#9
+          git branch -a
+          git rebase origin/main
+          #git push --force-with-lease origin #9
