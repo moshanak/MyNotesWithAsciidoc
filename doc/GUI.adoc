@@ -1,0 +1,50 @@
+:toc: left
+:toc-title: 目次
+:sectnums:
+:toclevels: 5
+:ext: adoc
+
+= GUI
+
+== ライブラリやフレームワーク
+C++ のプログラミング言語と OpenGL, DirectX, Vulkan 等のグラフィックスライブラリを組み合わせて、Windows で使えそうなGUIを調べた。また、もうメンテされていないものは除外した。
+
+=== Qt
+* https://www.qt.io/
+* OpenGL, DirectX, Vulkan すべて対応
+* QtWidget, QtQuick の2種類のGUIの実装方法がある。
+* 商用利用するならば、商用Qtライセンスが必要で有償
+* 個人の趣味や学術目的ならば、GPLおよびLGPLv3オープンソースライセンスで利用可
+
+=== ImGui
+* https://github.com/ocornut/imgui
+* OpenGL, DirectX, Vulkan すべて対応
+* MIT License
+
+=== wxWidgets
+* https://www.wxwidgets.org/
+* OpenGL に対応
+* wxWindows Library Licence
+** https://www.wxwidgets.org/about/licence/
+
+=== glfw
+* https://www.glfw.org/
+* OpenGL, Vulkan に対応
+* zlib/libpng license
+
+=== FLTK
+* https://www.fltk.org/index.php
+* OpenGL に対応
+* LGPL ライセンスに加えて、独自のライセンスを追記
+** https://www.fltk.org/COPYING.php
+
+=== FOX TOOLKIT
+* http://www.fox-toolkit.org/
+* OpenGL に対応
+* LGPL ライセンスに加えて、独自のライセンスを追記
+** http://fox-toolkit.org/license.html
+
+== 参考サイト
+
+* OpenGL な UI を作るライブラリ一覧
+** https://qiita.com/shimacpyon/items/e5d2a4e2019273345c37
