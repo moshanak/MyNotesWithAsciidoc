@@ -1,0 +1,38 @@
+:toc: left
+:toc-title: 目次
+:sectnums:
+:toclevels: 5
+:ext: adoc
+
+= グラフィックスエンジニアに必要なスキル
+
+募集要項を見ながら、どのようなスキルが必要か調べてみた。 +
+◎：必須スキル、○：必須または歓迎スキル、△：歓迎スキル
+
+プログラミング言語::
+◎C++:::
+マルチスレッド
+△C#:::
+WPF
+△Python:::
+
+グラフィックスプログラミング::
+◎DirectX12:::
+◎Vulkan:::
+◎OpenGL:::
+
+その他::
+◎GPUの知識:::
+◎グラフィックス表現の知識:::
+ハイエンド、リアルタイム、Physically-Based Rendering、髪・布など特殊表現含むBRDFの設計、GI表現のためのオフライン・ランタイム計算手法、地形・樹木のプロシージャル生成、GPU駆動でのカリングシステム
+○ゲームやエンジン開発経験:::
+○DCCツールの知識:::
+Maya、Houdini、アセットパイプライン
+○プロファイラ、最適化、デバッグの知識:::
+ShaderModel6.0以上のWave Intrinsic、SIMD、PIX on Windows、NsightGraphics、RadeonProfiler
+○数学、物理の知識:::
+線形代数、光学、微積分、統計
+○GPGPUの知識:::
+流体シミュレーション
+○アニメーションの知識:::
+△英語:::
