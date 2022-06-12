@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<title>グラフィックスエンジニアに必要なスキル</title>
+<title>過去に作成したもの</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,75 +436,317 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-<h1>グラフィックスエンジニアに必要なスキル</h1>
+<h1>過去に作成したもの</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">目次</div>
+<ul class="sectlevel1">
+<li><a href="#_イメージベースドレンダリング">1. イメージベースドレンダリング</a></li>
+<li><a href="#_ボリュームレンダリング">2. ボリュームレンダリング</a></li>
+<li><a href="#_novlogue">3. novlogue</a></li>
+<li><a href="#_hololens2">4. HoloLens2</a></li>
+<li><a href="#_asciidoc_github_pages">5. AsciiDoc + GitHub Pages</a></li>
+<li><a href="#_qt6">6. Qt6</a></li>
+<li><a href="#_おまけ_競技プログラミング">7. (おまけ) 競技プログラミング</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>募集要項を見ながら、どのようなスキルが必要か調べてみた。<br>
-◎：必須スキル、○：必須または歓迎スキル、△：歓迎スキル</p>
+<p>仕事以外で作成したものを公開できる範囲でまとめました。ご参考にしていただければと思います。</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">プログラミング言語</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">◎C++</dt>
-<dd>
-<p>マルチスレッド</p>
-</dd>
-<dt class="hdlist1">△C#</dt>
-<dd>
-<p>WPF</p>
-</dd>
-<dt class="hdlist1">△Python</dt>
-</dl>
 </div>
-</dd>
-<dt class="hdlist1">グラフィックスプログラミング</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">◎DirectX12</dt>
-<dt class="hdlist1">◎Vulkan</dt>
-<dt class="hdlist1">◎OpenGL</dt>
-</dl>
 </div>
-</dd>
-<dt class="hdlist1">その他</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">◎GPUの知識</dt>
-<dt class="hdlist1">◎グラフィックス表現の知識</dt>
-<dd>
-<p>ハイエンド、リアルタイム、Physically-Based Rendering、髪・布など特殊表現含むBRDFの設計、GI表現のためのオフライン・ランタイム計算手法、地形・樹木のプロシージャル生成、GPU駆動でのカリングシステム</p>
-</dd>
-<dt class="hdlist1">○ゲームやエンジン開発経験</dt>
-<dt class="hdlist1">○DCCツールの知識</dt>
-<dd>
-<p>Maya、Houdini、アセットパイプライン</p>
-</dd>
-<dt class="hdlist1">○プロファイラ、最適化、デバッグの知識</dt>
-<dd>
-<p>ShaderModel6.0以上のWave Intrinsic、SIMD、PIX on Windows、NsightGraphics、RadeonProfiler</p>
-</dd>
-<dt class="hdlist1">○数学、物理の知識</dt>
-<dd>
-<p>線形代数、光学、微積分、統計</p>
-</dd>
-<dt class="hdlist1">○GPGPUの知識</dt>
-<dd>
-<p>流体シミュレーション</p>
-</dd>
-<dt class="hdlist1">○アニメーションの知識</dt>
-<dt class="hdlist1">△英語</dt>
-</dl>
+<div class="sect1">
+<h2 id="_イメージベースドレンダリング">1. イメージベースドレンダリング</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>大学生の頃に、イメージベースドレンダリングの分野で研究をしていました。<br>
+具体的には、照明環境の異なる2枚の画像を入力し、照明環境を変化させた画像を出力する方法を検討していました。<br>
+下記のデモは、当時、実装したプログラムで出力した結果です。</p>
 </div>
-</dd>
-</dl>
+<div class="ulist">
+<ul>
+<li>
+<p>CG画像（等方性反射）を用いたデモ動画</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/1_cg_isotropic.mp4" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CG画像（異方性反射）を用いたデモ動画</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/1_cg_anisotropic.mp4" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>実写画像を用いたデモ動画</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/1_real.mp4" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ボリュームレンダリング">2. ボリュームレンダリング</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>大学生の頃に、ボリュームレンダリングのプログラムを実装しました。<br>
+任意のボクセルデータに対してレイキャスティングを行い、不透明度と伝達関数を設定してレンダリングしています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>レンダリング結果画像<br>
+足の骨を表現する 256x256x256 のボクセルデータを用いてレンダリングした結果です。<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>不透明度の設定変更</p>
+<div class="ulist">
+<ul>
+<li>
+<p>完全に不透明<br>
+中が透けないため、256x256x256の立方体が表示されます。<br>
+<span class="image"><img src="_images/2_volume1.bmp" alt="2 volume1"></span></p>
+</li>
+<li>
+<p>不透明度の変化<br>
+徐々に不透明度を下げていったレンダリング結果になります。<br>
+<span class="image"><img src="_images/2_volume2.bmp" alt="2 volume2"></span><br>
+<br>
+<span class="image"><img src="_images/2_volume3.bmp" alt="2 volume3"></span><br>
+<br>
+<span class="image"><img src="_images/2_volume4.bmp" alt="2 volume4"></span><br>
+<br>
+<span class="image"><img src="_images/2_volume5.bmp" alt="2 volume5"></span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>伝達関数の設定変更<br>
+↑ のレンダリングで用いていた伝達関数をカラーマップで表示すると<br>
+<span class="image"><img src="_images/2_tf1.bmp" alt="2 tf1"></span><br>
+になります。<br>
+この伝達関数を変えると、下記のようなレンダリング結果になります。<br>
+<span class="image"><img src="_images/2_tf2.bmp" alt="2 tf2"></span><br>
+<span class="image"><img src="_images/2_volume6.bmp" alt="2 volume6"></span><br>
+<br>
+<span class="image"><img src="_images/2_tf3.bmp" alt="2 tf3"></span><br>
+<span class="image"><img src="_images/2_volume7.bmp" alt="2 volume7"></span><br>
+<br>
+<span class="image"><img src="_images/2_tf4.bmp" alt="2 tf4"></span><br>
+<span class="image"><img src="_images/2_volume8.bmp" alt="2 volume8"></span></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_novlogue">3. novlogue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>趣味で、「novlogue」というスマホアプリを複数人で開発していました。<br>
+私は GUI、スマホの位置情報の取得等、フロントエンド全般の実装を担当していました。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>アプリについて<br>
+日中どこにいたかスマホの位置情報と組み合わせて、自身の精神状態などを記録することができるアプリです。<br>
+記録した情報を集計してグラフ化することもできます。<br></p>
+</li>
+<li>
+<p>ウェブサイト<br>
+<a href="https://www.novlogue.com/" class="bare">https://www.novlogue.com/</a><br>
+(現在は更新されていません。)</p>
+</li>
+<li>
+<p>デモ動画について<br>
+当時、メンバーと開発状況を共有するために、いくつか録画していたものを紹介します。</p>
+</li>
+<li>
+<p>現在時間や特定の時間を指定して、精神状態を記録するデモ</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/3_recordMental.mp4" width="320" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>実機で、精神状態を記録するデモ</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/3_recordMentalReal.mp4" width="960" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ログイン、ログアウト機能のデモ</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/3_loginout.mp4" width="320" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>スマホの位置情報を記録するデモ<br>
+動画だけでは分かりにくいので補足します。<br>
+0:17 頃の Debug ウィンドウは、定期的にスマホで取得した緯度と経度を表示しています。<br>
+0:30 頃の 03:23-03:59 のようなブロックが4つ表示されていますが、それぞれ下記の意味があります。<br>
+白いブロックは、同じ場所に滞在している時間を示しています。<br>
+赤いブロックは、移動している時間を示しています。<br>
+白と赤どちらにするかは、取得した緯度と経度を元にして自動で決めています。<br>
+0:40 以降は、自動で決まったブロックを手動でまとめたり、分割したりする様子を示しています。</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/3_recordPosition.mp4" width="320" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hololens2">4. HoloLens2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>趣味で、XR への興味本位から HoloLens2 で遊んでいました。<br>
+下記のデモ動画のようなものを作っていました。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MR 空間上に表示したオブジェクトをエアタップで爆発させてみた</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="_images/4_hololens.mp4" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asciidoc_github_pages">5. AsciiDoc + GitHub Pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AsciiDoc で書いたものを GitHub Actions で自動デプロイして GitHub Pages に公開できる仕組みを作りました。<br>
+AsciiDoc で書くことができ、PCだけでなくスマホでも見ることができる、自分用のメモ帳が欲しくて作っていました。<br>
+今、表示しているこのページも、同じ仕組みを用いています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GitHub上のリポジトリ<br>
+<a href="https://github.com/moshanak/MyNotesWithAsciidoc" class="bare">https://github.com/moshanak/MyNotesWithAsciidoc</a></p>
+</li>
+<li>
+<p>GitHub Pages<br>
+<a href="https://moshanak.github.io/MyNotesWithAsciidoc/" class="bare">https://moshanak.github.io/MyNotesWithAsciidoc/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_qt6">6. Qt6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Qt5 から Qt6 へバージョンアップ時に懸案がないか事前検証する目的で、個人的に Qt6 + OpenGL の実装を試していました。<br>
+どちらかというと、趣味というより、業務で活用する可能性があったため、試していたものです。<br>
+シンプルなシーングラフを実装して、Qt で作成したウィンドウ上に OpenGL で三角形を描画しています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GitHub 上のリポジトリ<br>
+<a href="https://github.com/moshanak/QtPlayGround" class="bare">https://github.com/moshanak/QtPlayGround</a></p>
+</li>
+<li>
+<p>起動時の画面<br>
+ただ三角形を描画しているだけですので、デモとしては面白みがないかもしれません。<br>
+<span class="image"><img src="_images/result.png" alt="result"></span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_おまけ_競技プログラミング">7. (おまけ) 競技プログラミング</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>作成したものではないですが、趣味で競技プログラミングを楽しんでいました。<br>
+精進やコンテストに時間を取られるため、最近では他のことを優先して、競技プログラミングは控えています。<br>
+当時の参加状況は下記をご参照ください。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AtCoder<br>
+<a href="https://atcoder.jp/users/moshanak" class="bare">https://atcoder.jp/users/moshanak</a></p>
+</li>
+<li>
+<p>CodeForces<br>
+<a href="https://codeforces.com/profile/moshanak" class="bare">https://codeforces.com/profile/moshanak</a><br>
+ (コンテストは深夜帯の時間が多いため、稀に参加)</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
