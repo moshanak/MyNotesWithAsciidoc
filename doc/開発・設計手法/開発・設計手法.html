@@ -443,7 +443,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
 <li><a href="#_テスト駆動開発tdd">1. テスト駆動開発（TDD）</a></li>
-<li><a href="#_ドメイン駆動開発ddd">2. ドメイン駆動開発（DDD）</a></li>
+<li><a href="#_ビヘイビア駆動開発bdd">2. ビヘイビア駆動開発（BDD）</a></li>
+<li><a href="#_ドメイン駆動設計ddd">3. ドメイン駆動設計（DDD）</a></li>
+<li><a href="#_gofのデザインパターン">4. GoFのデザインパターン</a></li>
 </ul>
 </div>
 </div>
@@ -451,19 +453,156 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_テスト駆動開発tdd">1. テスト駆動開発（TDD）</h2>
 <div class="sectionbody">
-
+<div class="dlist">
+<dl>
+<dt class="hdlist1">概要</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>最初に単体テストを書く。<br>
+その後、各単体テストに合格するようにプロダクトコードを実装する。</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">所感</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>数値計算を行う関数など、入力値と出力値が明確な機能を開発する場合は、効果がありそう。</p>
+</li>
+<li>
+<p>GUIなど、単体テストを実装しにくいプロダクトコードが多いとメリットを感じない。</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">参考資料</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>書籍：
+<a href="https://www.amazon.co.jp/%E3%83%86%E3%82%B9%E3%83%88%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA-Kent-Beck/dp/4274217884">テスト駆動開発</a></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ドメイン駆動開発ddd">2. ドメイン駆動開発（DDD）</h2>
+<h2 id="_ビヘイビア駆動開発bdd">2. ビヘイビア駆動開発（BDD）</h2>
 <div class="sectionbody">
-
+<div class="dlist">
+<dl>
+<dt class="hdlist1">概要</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>TDD を拡張した開発手法。<br>
+単体テストではなく、ユーザーのユースケース（ストーリー、シナリオ）に沿ったテストを記述する。</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">所感</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>試したことがないため予想だが、TDD よりはテストのメンテが楽そう。</p>
+</li>
+<li>
+<p>C++ に対応しているテストフレームワークがあるか疑問。igloo というものが検索に引っかかったが、最近はメンテされていない。</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">参考資料</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>ウェブサイト：
+<a href="https://shiftasia.com/ja/column/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8Btdd%E3%81%A8bdd/">アジャイル開発における「TDD」と「BDD」</a></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ドメイン駆動設計ddd">3. ドメイン駆動設計（DDD）</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">概要</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>編集中</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">所感</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>編集中</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gofのデザインパターン">4. GoFのデザインパターン</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">概要</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>生成、構造、振る舞いの３つの観点で、23種類のよく使われる設計がクラス図としてまとめられている。</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">所感</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>それぞれのパターンは知っておいた方が良いが、言語機能として提供されているものもある。 C++ のイテレータなど。</p>
+</li>
+<li>
+<p>必ずしも常にデザインパターンに従って設計する必要はないだろう。たとえば、static Factory Method のようにGoFのデザインパターンではない、生成の設計もある。</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-31 07:36:58 UTC
+Last updated 2022-07-31 10:29:53 UTC
 </div>
 </div>
 </body>
